@@ -1,0 +1,49 @@
+#Model specification
+name: "MACE"
+model: MACE
+multiheads_finetuning: True
+foundation_model: "/leonardo_scratch/fast/EUHPC_A04_113/Alberto/MLIP/MACE/models/pre_trained/omat-pbe-medium/MACE-matpes-pbe-omat-fp32.model"
+
+#Scheduler specififcation
+lr: 0.0001
+amsgrad: true
+ema: true
+ema_decay: 0.9999
+patience: 10
+scheduler_patience: 2
+max_num_epochs: 100
+start_swa: 80
+swa: true
+swa_lr: 0.00001
+seed: 73136
+
+#Data specification
+heads:
+  Default:
+    # E0s: 'Mo' : -2003.2530979 , 'S' : -307.4940763, 'O' : -561.6721524, 'H' : -13.7305378
+    E0s: { 1 : -13.7305378, 8 : -561.6721524, 16 : -307.4940763, 42 : -2003.2530979 }
+    train_file: "/path/to/Train-data.xyz"
+    valid_file: "/path/to/Valid-data.xyz"
+    energy_key: REF_energy
+    forces_key: REF_forces
+  pt_head:
+    #'O2': -1.54690765, 'S': -0.89091719, 'Mo': -4.60213279, 'C': -1.26281801, 'H2': -1.11723232
+    E0s: { 1 : -0.55861616, 6 : -1.26281801, 8 : -0.773454, 16 : -0.89091719, 42 : -4.60213279 }
+    energy_key: REF_energy
+    forces_key: REF_forces
+    train_file: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/dataset/pre_trained/train_MoSCOH.extxyz
+    valid_file: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/dataset/pre_trained/train_MoSCOH.extxyz
+weight_pt: 1 
+energy_weight: 1.0
+forces_weight: 100.0
+
+#Resource specification
+num_workers: 8
+batch_size: 6
+valid_batch_size: 1
+default_dtype: float32
+device: cuda
+distributed: False
+enable_cueq: True
+restart_latest: True
+save_cpu: False

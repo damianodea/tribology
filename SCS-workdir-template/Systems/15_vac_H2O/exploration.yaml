@@ -1,0 +1,48 @@
+Phase0:
+  Geometry:
+    Species: {Mo : 95.95, S : 32.065, O : 15.999, H : 1.008}
+    Surface_down:
+      Structure_1:
+        Path: "/leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Structures/surfaces/15S_vac_MoS2_ortho_6x4_2layers.xyz"
+    Molecules:
+      Box: [10.0]
+      Density: 1.0 #g/cm3
+      Structure_1: 
+        Path: "/leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Structures/molecules/H2O.xyz"
+        Number: 1000    
+  Run:
+    Type: 'Relax'
+
+    Sampling: 2
+    Sampling_mode: "Max_devi"     #Sampling mode: 'Random' or 'Max_devi'    
+    Out_freq: 5
+    Relative: 0.1
+    Min_devi: 0.01        
+
+Phase1: #Anneal system to 1000K
+  Run:
+    Type: 'NVT'
+    Timestep: 1.0 #fs
+    Steps: 500000 #500ps
+    Temperature: {Tstart : 1, Tstop : 1000}
+
+    Sampling: 25
+    Sampling_mode: "Max_devi"     #Sampling mode: 'Random' or 'Max_devi'    
+    Out_freq: 50
+    Relative: 0.1
+    Min_devi: 0.01      
+    Max_cell_size: 60
+
+Phase2: #Quench system to 1K
+  Run:
+    Type: 'NVT'
+    Timestep: 1.0 #fs
+    Steps: 500000 #500ps
+    Temperature: {Tstart : 1000, Tstop : 1}
+
+    Sampling: 25
+    Sampling_mode: "Max_devi"     #Sampling mode: 'Random' or 'Max_devi'    
+    Out_freq: 50
+    Relative: 0.1
+    Min_devi: 0.01      
+    Max_cell_size: 60    
