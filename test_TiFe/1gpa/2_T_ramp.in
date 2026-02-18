@@ -1,0 +1,60 @@
+# singolo template per tutti i load: modify accordingly read_restart, addforce, dump, write_restart
+
+units  metal
+boundary  p p p
+log log_T_1gpa.lammps 
+#atom_style  atomic
+read_restart relax_load_1gpa.restart   ####################### <-- change XXX to 1gpa, 5gpa, 10gpa
+
+# --- MACE Potential ---
+pair_style      mliap unified /leonardo_work/tra25_mhpcqc/ab_initio_computations/MACE-matpes-pbe-omat-fp32.model-mliap_lammps.pt 0
+pair_coeff      * * Fe Ti
+
+mass              1      55.844999985634189 # Fe
+mass              2      47.866999987686484 # Ti
+
+timestep  0.005
+
+#test 2k, poi 20k 
+variable n_step equal 20000
+
+compute  temp_down  Ti_NVT_down  temp/com
+compute  temp_up  Fe_NVT_up  temp/com
+
+variable fcm_Fe_x equal fcm(Fe_PRESS_up,x)
+variable xcmSurfDownTop equal xcm(Ti_NVE_down,z)
+variable xcmSurfUpBottom equal xcm(Fe_NVE_up,z)
+variable layers_distance equal v_xcmSurfUpBottom-v_xcmSurfDownTop
+
+variable    load    equal   -0.046  ################## For example, for 1gpa: -0.118, for 5gpa: -0.590, for 10gpa: -1.18 (use the value for the corresponding restart)
+
+thermo  100
+thermo_style custom step time temp c_temp_down c_temp_up v_load etotal v_fcm_Fe_x v_layers_distance
+
+dump  dump_pos  all  custom  100  dyn_rampT_1gpa.lammpstrj  element  xu  yu  zu		#########################
+dump_modify  dump_pos  format  float  %15.12g  element  Fe Ti  sort  id
+
+fix             shear_top       Fe_PRESS_up  setforce  0.0 0.0 NULL
+fix             rigid_top       Fe_FIX_up   rigid/nve single torque * off off off
+fix             shear_bot       Ti_FIX_down  setforce  0.0 0.0 0.0
+
+# Apply constant load in z to Fe_PRESS_up 
+fix  load_up  Fe_PRESS_up    addforce  0.0  0.0  -0.046  	################# <-- change YYY to the correct value
+fix_modify  load_up  energy yes
+
+# Temperature ramp: from 1 K to 500 K over n_step steps
+
+fix nvt_Fe   Fe_NVT_up     nvt  temp  1  500 $(20.*dt)
+fix_modify  nvt_Fe  temp  temp_up
+
+fix nvt_Ti   Ti_NVT_down     nvt  temp  1  500 $(20.*dt)
+fix_modify  nvt_Ti  temp  temp_down
+
+fix  nve_total  NVE_int   nve
+
+velocity  Fe_NVE_up  create  1  9181  dist  gaussian
+velocity  Ti_NVE_down  create  1  9182  dist  gaussian
+
+run ${n_step}
+
+write_restart rampT_1gpa.restart	#######################################

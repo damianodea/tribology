@@ -1,0 +1,65 @@
+# --- Setup ---
+units  metal
+boundary  p p p
+atom_style  atomic
+read_data b1h1_TiFe_asp.data
+
+# --- Potential ---
+pair_style mliap unified /leonardo_work/tra25_mhpcqc/ab_initio_computations/MACE-matpes-pbe-omat-fp32.model-mliap_lammps.pt 0
+pair_coeff * * Fe Ti
+
+mass 1 55.844999985634189   # Fe
+mass 2 47.866999987686484   # Ti
+
+group Ti_FIX_down id 1:216
+group Ti_NVT_down id 217:1512
+group Ti_NVE_down id 1513:3757
+group Fe_NVE_up id 3758:6107
+group Fe_NVT_up id 6108:7502
+group Fe_FIX_up id 7503:7781
+group Fe_PRESS_up id 7782:8060
+group NVE_int union Ti_NVE_down Fe_NVE_up
+
+variable fcm_Fe_x equal fcm(Fe_PRESS_up,x)
+variable xcmSurfDownTop equal xcm(Ti_NVE_down,z)
+variable xcmSurfUpBottom equal xcm(Fe_NVE_up,z)
+variable layers_distance equal v_xcmSurfUpBottom-v_xcmSurfDownTop
+
+variable load_1 equal -0.046
+variable load_2 equal -0.23
+variable load_3 equal -0.46
+
+thermo 100
+thermo_style custom step etotal v_fcm_Fe_x v_layers_distance
+
+dump dump_pos all custom 100 dyn_load.lammpstrj element xu yu zu
+dump_modify dump_pos format float %15.12g element Fe Ti sort id
+
+fix shear_top Fe_PRESS_up setforce 0.0 0.0 NULL
+fix rigid_top Fe_FIX_up rigid/nve single torque * off off off
+fix shear_bot Ti_FIX_down setforce 0.0 0.0 0.0
+
+# --- Step 1: Minimize with load1 (1 GPa) ---
+fix load_up1 Fe_PRESS_up addforce 0.0 0.0 -0.046
+fix_modify load_up1 energy yes
+min_style cg
+minimize 0.0 1e-3 1000 10000
+write_restart relax_load_1gpa.restart
+unfix load_up1
+
+# --- Step 2: Minimize with load2 (5 GPa) ---
+fix load_up2 Fe_PRESS_up addforce 0.0 0.0 -0.23
+fix_modify load_up2 energy yes
+minimize 0.0 1e-3 1000 10000
+write_restart relax_load_5gpa.restart
+unfix load_up2
+
+# --- Step 3: Minimize with load3 (10 GPa) ---
+fix load_up3 Fe_PRESS_up addforce 0.0 0.0 -0.46
+fix_modify load_up3 energy yes
+minimize 0.0 1e-3 1000 10000
+write_restart relax_load_10gpa.restart
+unfix load_up3
+
+
+# for the T_ramp, you can restart from any of the restart files written, to evaluate separately the three loads

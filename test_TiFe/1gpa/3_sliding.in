@@ -1,0 +1,74 @@
+# singolo template per tutti i load: modify accordingly read_restart, addforce, dump, write_restart
+# la temperatura è quella raggiunta dall'ultima rampa, verificare sia aggiornata
+
+# nota: i compute sono calcolati ad ogni timestep, mentre i variable (se sono calcolati di altri dati) sono calcolati solo quando li richiedi (e.g. alla frequenza dei dump o dei thermo); e i compute non possono essere usati per farci operazioni sopra
+
+units           metal
+atom_style      atomic
+newton          on
+boundary        p p p
+log log_s_1gpa.lammps
+
+read_restart rampT_1gpa.restart		###########################
+
+# --- MACE Potential ---
+pair_style      mliap unified /leonardo_work/tra25_mhpcqc/ab_initio_computations/MACE-matpes-pbe-omat-fp32.model-mliap_lammps.pt 0
+pair_coeff      * * Fe Ti
+
+# Masses (redundant if in data file, but harmless)
+mass              1      55.844999985634189 # Fe
+mass              2      47.866999987686484 # Ti
+
+timestep  0.005
+
+# test 5k, poi 50k
+variable n_step equal 50000
+
+compute  temp_down  Ti_NVT_down  temp/com
+compute  temp_up  Fe_NVT_up  temp/com
+
+dump  dump_pos  all  custom  500  dyn_sliding_1gpa.lammpstrj  element  xu  yu  zu  vx  vy  vz  fx  fy  fz	#################################
+dump_modify  dump_pos  format  float  %15.10g  element  Fe Ti  sort  id
+
+variable fcm_Fe_y equal fcm(Fe_PRESS_up,y)
+variable fcm_Ti_y equal fcm(Ti_FIX_down,y)
+variable xcmSurfDownTop equal xcm(Ti_NVE_down,z)
+variable xcmSurfUpBottom equal xcm(Fe_NVE_up,z)
+variable layers_distance equal v_xcmSurfUpBottom-v_xcmSurfDownTop
+
+variable	load    equal	-0.046	###################### constant load here 1GPa (=-0.11812482881) (instead of ramp up to 1GPa)
+
+variable	vely	equal	0.005	# 0.5 m/s	
+
+thermo  500
+thermo_style  custom  step  time  temp c_temp_down c_temp_up  etotal v_load  v_fcm_Fe_y  v_fcm_Ti_y  v_layers_distance # fnrom press
+
+# scorrere top layer a velocità costante con move (ignora forze, non le mette a 0) poi si porta dietro gli altri grazie alle interazioni interatomiche
+fix             shear_top       Fe_PRESS_up	move	variable NULL  NULL  NULL  NULL v_vely  NULL	# i primi tre null sono le coord, poi le componenti della velocità le altre tre entries
+fix             rigid_top       Fe_FIX_up	rigid/nve single torque * off off off   #using this i got alternating motion
+
+fix             shear_bot       Ti_FIX_down	move    linear  0.0 0.0 0.0
+#   fix             shear_bot       Ti_FIX_down  setforce  0.0 0.0 0.0
+#   fix             rigid_bot       Ti_FIX_down   rigid/nve single torque * off off off
+
+# aggiungi forza su z
+fix  load_up  Fe_PRESS_up    addforce  0.0  0.0  -0.046 	#############################
+fix_modify  load_up  energy yes
+
+# applica termostato a Fe NVT
+fix nvt_Fe   Fe_NVT_up     nvt  temp  500  500 $(100.*dt)
+fix_modify  nvt_Fe  temp  temp_up
+
+# applica termostato a Ti NVT
+fix nvt_Ti   Ti_NVT_down     nvt  temp  500  500 $(100.*dt)
+fix_modify  nvt_Ti  temp  temp_down
+
+# free evolution for the interfacial region
+fix  nve_total  NVE_int   nve          
+
+
+# restart 1000 load.restart     # use in case of long simulations, safe in case of crash
+
+run ${n_step}
+
+write_restart sliding_1gpa.restart	###############################
