@@ -1,0 +1,4 @@
+ase==3.23.0
+dpdata==0.2.19
+matplotlib==3.9.1
+PyYAML==6.0.1

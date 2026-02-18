@@ -1,0 +1,5 @@
+#File providing ab initio computation information for the this system
+Restarts : 1                                                              # Number of restarts if calculation does not complete
+Groups : 4                                                                # Launch 'Groups' number of launchers that simultaneously perform scf calculations on the same system
+Jobscript : "/path/to/Reference/Systems/H2O-Fe110/job_qe.sh"              # Path to the ab initio job script
+Job_cmd : "mpirun -np 8 --map-by socket:PE=8 --rank-by core pw.x -nk 1"   # Additional commands appended to ab initio job script

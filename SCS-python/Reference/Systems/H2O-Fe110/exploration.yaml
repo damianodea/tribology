@@ -1,0 +1,70 @@
+#Phase0 must be the initial phase of SCS exploration workflow. In this example, during Phase0 we create an iron surface from file, performing NVT molecular dynamics
+Phase0: #Each phase is a dictionary containing the 'Geometry' and 'Run' keys
+
+  Geometry: #Contains the keys: 'Species' (mandatory), 'Surface_down', 'Surface_up', 'Molecules' or 'Bulk'
+
+    Species: {Fe : 55.845, C : 12.011, O : 15.999, H : 1.008} #Atomic symbols and masses in atomic units
+
+    Surface_down: #One or multiple 'Structure' indiciated with: 'Structure_1', 'Structure_2', ... .If multiple structures are provided, one of them is randomly choosen
+
+      Structure_1: #Path to an ASE readable structure file
+        Path: '/path/to/Reference/Structures/Fe110.xyz'
+
+      Structure_2: #Path to an ASE readable structure file
+        Path: '/path/to/Reference/Structures/Fe100.xyz'
+        
+  Run: #Specifies run and sampling parameters. Allowed keys: 'Steps', 'Type', 'Temperature', 'Sampling', 'Relative', 'Min_devi', 'Max_devi'
+    Steps: 1000000                                                  # Number of molecular dynamic steps
+    Timestep: 1.0                                                   # Time step in femtoseconds  
+    Type: 'NVT'                                                     # Type of dynamics: 'Relax' or 'NVE' or 'NPT' or 'NVT'
+    Temperature: {Tstart : 10, Tstop : 350}                         # Temperature range in Kelvin: from 'Tstart' to 'Tstop'
+    Sampling: 10                                                    # Maximum number of atomic configurations (frames) sampled from this run
+    Relative: 0.1                                                   # Normalize force deviation with absolute value of force. Filter out forces smaller than 'Relative' (eV/A)
+    Min_devi: 0.1                                                   # Do not sample frames with force deviation below 'Min_devi'
+    Max_devi: 10.0                                                  # Do not sample frames with force deviation above 'Max_devi'
+
+#Subsequent phases are progressively numbered. In this example, during Phase1 the lower surface is re-initialized from last frame of Phase0 and a box of molecules is placed on top. Run is NPT, applying a confining pressure along z.
+Phase1: #Contains 'Geometry' and 'Run' keys.
+
+  Geometry:
+    Species: {Fe : 55.845, C : 12.011, O : 15.999, H : 1.008}
+
+    Surface_down: #Structures can be initialized from last frame of a previous phase.
+      Structure_1:    
+        Path: Phase0/Surface_down
+    
+    Molecules: #Contains: 'Box', 'Density', 'Structure_1', 'Structure_2', ...
+      
+      Box: [20] #Size of the box in Angstrom: [x, y, z] or [z] if surface is provided
+      
+      Density: 1.5 #Density of the molecules in g/cm^3
+      
+      Structure_1: #One or multiple 'Structure' indiciated with: 'Structure_1', 'Structure_2', ... .If multiple structures are provided, the box is a mixture of them.
+        Path: '/path/to/Reference/Structures/Glycerol.xyz' #Path to an ASE readable structure file
+        Number: 6                                          #Number of molecules inside box. If 'Density' is provided, random number of molecules is generated (drawn from 0 to 'Number') until desired density is reached.
+      Structure_2:
+        Path: '/path/to/Reference/Structures/Water.xyz'    #Path to an ASE readble structure file
+        Number: 50                                         #Number of molecules inside box. If 'Density' is provided, random number of molecules is generated (drawn from 0 to 'Number') until desired density is reached.
+        
+  Run:
+    Steps: 1000000
+    Timestep: 1.0
+    Type: 'NPT'
+    Temperature: {Tstart : 350, Tstop : 1000}
+    Pressure: {z : {Pstart : 0.1, Pstop : 5.0}}            #Pressure range in GPa for specific cartesian componenet: from 'Pstart' to 'Pstop'
+    Sampling: 50
+    Relative: 0.1
+    Min_devi: 0.1
+    Max_devi: 15.0
+
+#In this example, during Phase2 'Geometry' is not indicated and, by default, will be initialized from the final frame of Phase1. Run is NVT.
+Phase2: 
+  Run:
+    Steps: 3000000
+    Timestep: 1.0
+    Type: 'NVT'
+    Temperature: {Tstart : 1000, Tstop : 300}
+    Sampling: 30
+    Relative: 0.1
+    Min_devi: 0.1
+    Max_devi: 15.0

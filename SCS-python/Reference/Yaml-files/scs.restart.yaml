@@ -1,0 +1,2 @@
+Current_iteration : 1                   # Restart from this iteration number, starting from 1
+Current_phase : 'START'                 # Resume iteration from this phase (START, TRAINING, EXPLORATION, ABINITIO, CONVERTING, END)

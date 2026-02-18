@@ -1,0 +1,41 @@
+Dataset:
+  Atom_types : ['Fe', 'C', 'O', 'H']                        # List of symbols of atoms used in SCS session
+  Initial : "/path/to/initial/dataset"                      # Path to initial dataset in deepmd/npy format
+
+
+Training:
+  Dataset_path : '/path/to/output/dataset/'                 # Path where output datasets (deepmd/npy format) are stored
+  N_models : 5                                              # Number of models in the ensemble trained at each iteration
+  Reference : '/path/to/reference/training/input.json'      # Path to reference deepmd training input.json (default: Reference/Training/input.json)
+  Wait_time : 1800                                          # Check training job status every 'Wait_time' seconds
+  Max_wait_time : 86400                                     # Maximum time (seconds) to wait for training job to finish
+  Job : 
+    Jobscript : "/path/to/training/jobscript"               # Path to training jobscript file (default: Reference/Jobscripts/job_training.sh)
+    Job_cmd : ""                                            # Additional commands appended to training jobscript
+    Submit_cmd : "sbatch"                                   # Command to submit training jobscript (default: sbatch, for SLURM scheduler)
+    Query_cmd : "squeue -o %T -j"                           # Command to get job status associated to jobid (default: squeue -o %T -j, for SLURM scheduler)
+    Query_keys : ['PENDING', 'RUNNING']                     # Possible job status (default: ['PENDING', 'RUNNING'], for SLURM scheduler)
+
+
+Exploration:
+  Systems : '/path/to/reference/systems'                    # Directory containing one folder for each systems to be explored (defualt: Reference/Systems)
+  Wait_time : 1800                                          # Check exploration job status every 'Wait_time' seconds
+  Max_wait_time : 86400                                     # Maximum time (seconds) to wait for exploration job to finish
+  Job : 
+    Packmol : "/path/to/packmol"                            # Path to packmol executable used to place molecules randomly during exploration
+    Jobscript : "/path/to/exploration/jobscript"            # Path to exploration jobscript file (default: Reference/Jobscripts/job_exploration.sh)
+    Lammps : "mpirun -np 1 /path/to/lammps -in "            # Command to run lammps appended to exploration jobscript file (default: mpirun -np 1 /path/to/lammps -in)
+    Job_commands : ""                                       # Additional commands appended to exploration jobscript              
+    Submit_cmd : "sbatch"                                   # Command to submit exploration jobscript (default: sbatch, for SLURM scheduler)
+    Query_cmd : "squeue -o %T -j"                           # Command to get job status associated to jobid (default: squeue -o %T -j, for SLURM scheduler)
+    Query_keys : ['PENDING', 'RUNNING']                     # Possible job status (default: ['PENDING', 'RUNNING'], for SLURM scheduler)
+    
+
+Abinitio:
+  Systems : '/path/to/reference/systems'                    # Directory containing one folder for each systems computed ab initio, usually equal to systems to be explored (defualt: Reference/Systems)
+  Wait_time : 1800                                          # Check ab initio job status every 'Wait_time' seconds
+  Max_wait_time : 86400                                     # Maximum time (seconds) to wait for ab initio job to finish
+  Job : 
+    Submit_cmd : "sbatch"                                   # Command to submit ab initio jobscript (default: sbatch, for SLURM scheduler)
+    Query_cmd : "squeue -o %T -j"                           # Command to get job status associated to jobid (default: squeue -o %T -j, for SLURM scheduler)
+    Query_keys : ['PENDING', 'RUNNING']                     # Possible job status (default: ['PENDING', 'RUNNING'], for SLURM scheduler)
