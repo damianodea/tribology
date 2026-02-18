@@ -1,0 +1,168 @@
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_biMoS2_H2O_3GPa_0
+  start: 1768390706.171023
+  status: RUNNING
+  submit_id: 32313267
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/biMoS2_H2O_3GPa/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_biMoS2_H2O_3GPa_1
+  start: 1768391649.9122403
+  status: RUNNING
+  submit_id: 32313751
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/biMoS2_H2O_3GPa/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_biMoS2_H2O_3GPa_2
+  start: 1768390708.6506617
+  status: RUNNING
+  submit_id: 32313270
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/biMoS2_H2O_3GPa/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_biMoS2_H2O_3GPa_3
+  start: 1768390708.9171035
+  status: RUNNING
+  submit_id: 32313273
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/biMoS2_H2O_3GPa/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_S_edge_H2O_0
+  start: 1768390711.2571664
+  status: COMPLETED
+  submit_id: 32313274
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/S_edge_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_S_edge_H2O_1
+  start: 1768397223.9553337
+  status: COMPLETED
+  submit_id: 32317343
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/S_edge_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_S_edge_H2O_2
+  start: 1768390713.7220318
+  status: COMPLETED
+  submit_id: 32313276
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/S_edge_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_S_edge_H2O_3
+  start: 1768390713.991827
+  status: COMPLETED
+  submit_id: 32313277
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/S_edge_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_Mo_edge_H2O_0
+  start: 1768396908.8699076
+  status: COMPLETED
+  submit_id: 32317245
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/Mo_edge_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_Mo_edge_H2O_1
+  start: 1768390714.5289607
+  status: COMPLETED
+  submit_id: 32313279
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/Mo_edge_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_Mo_edge_H2O_2
+  start: 1768390714.7963154
+  status: COMPLETED
+  submit_id: 32313280
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/Mo_edge_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_Mo_edge_H2O_3
+  start: 1768390715.0772934
+  status: COMPLETED
+  submit_id: 32313281
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/Mo_edge_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_4_vac_H2O_0
+  start: 1768390715.3673012
+  status: COMPLETED
+  submit_id: 32313282
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/4_vac_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_4_vac_H2O_1
+  start: 1768390715.6324584
+  status: COMPLETED
+  submit_id: 32313283
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/4_vac_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_4_vac_H2O_2
+  start: 1768390715.901273
+  status: COMPLETED
+  submit_id: 32313284
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/4_vac_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_4_vac_H2O_3
+  start: 1768390716.178716
+  status: COMPLETED
+  submit_id: 32313285
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/4_vac_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_15_vac_H2O_0
+  start: 1768390716.45872
+  status: COMPLETED
+  submit_id: 32313286
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/15_vac_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_15_vac_H2O_1
+  start: 1768397224.2381132
+  status: COMPLETED
+  submit_id: 32317344
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/15_vac_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_15_vac_H2O_2
+  start: 1768390717.0220053
+  status: COMPLETED
+  submit_id: 32313288
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/15_vac_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_15_vac_H2O_3
+  start: 1768390717.2911603
+  status: COMPLETED
+  submit_id: 32313289
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/15_vac_H2O/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_MoO3_0
+  start: 1768395354.1991105
+  status: COMPLETED
+  submit_id: 32316652
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/MoO3/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_MoO3_1
+  start: 1768390717.8605275
+  status: COMPLETED
+  submit_id: 32313291
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/MoO3/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_MoO3_2
+  start: 1768390718.1513617
+  status: COMPLETED
+  submit_id: 32313292
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/MoO3/SAMPLED
+- cmd: sbatch ai-qe.scs.sh
+  gpu: null
+  name: Label_MoO3_3
+  start: 1768390718.4438527
+  status: COMPLETED
+  submit_id: 32313293
+  workdir: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/8/Exploration/MoO3/SAMPLED

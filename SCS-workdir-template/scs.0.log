@@ -1,0 +1,261 @@
+2025-11-13 18:12:54,738 - INFO - Preparing exploration jobs for 9 systems:
+2025-11-13 18:12:54,744 - INFO - MoS2_10H2O_5GPa  MoS2_10H2O_500MPa  MoS2_50H2O_5GPa  MoS2_100H2O_500MPa  MoS2_100H2O_5GPa  MoS2_100H2O_1GPa  MoS2_50H2O_1GPa  MoS2_10H2O_1GPa  MoS2_50H2O_500MPa
+2025-11-13 18:12:54,744 - INFO - Writing exploration jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_5GPa
+2025-11-13 18:12:54,755 - INFO - Writing exploration jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_500MPa
+2025-11-13 18:12:54,764 - INFO - Writing exploration jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_5GPa
+2025-11-13 18:12:54,773 - INFO - Writing exploration jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_500MPa
+2025-11-13 18:12:54,781 - INFO - Writing exploration jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_5GPa
+2025-11-13 18:12:54,790 - INFO - Writing exploration jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_1GPa
+2025-11-13 18:12:54,799 - INFO - Writing exploration jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_1GPa
+2025-11-13 18:12:54,807 - INFO - Writing exploration jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_1GPa
+2025-11-13 18:12:54,816 - INFO - Writing exploration jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_500MPa
+2025-11-13 18:12:54,826 - INFO - Preparing to submit exploration jobs to queue system
+2025-11-13 18:12:54,826 - INFO - 1000 maximum concurrent jobs
+2025-11-13 18:12:54,826 - INFO - Saving JobManager status inside /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/scs.JobManager.yaml
+2025-11-13 18:12:54,826 - INFO - 300 seconds between job submissions and 86400 seconds for out-of-time
+2025-11-13 18:12:54,826 - INFO - Querying job status with command: sacct --format=State --noheader -j 
+2025-11-13 18:12:54,826 - INFO - 9 exploration jobs will be submitted
+2025-11-13 19:02:38,164 - INFO - MoS2_10H2O_5GPa | phase0: 2 sampled frames
+
+2025-11-13 19:02:58,081 - INFO - MoS2_10H2O_1GPa | phase0: 2 sampled frames
+
+2025-11-13 19:03:16,511 - INFO - MoS2_50H2O_1GPa | phase0: 2 sampled frames
+
+2025-11-13 19:03:17,274 - INFO - MoS2_100H2O_1GPa | phase0: 2 sampled frames
+
+2025-11-13 19:03:18,787 - INFO - MoS2_50H2O_500MPa | phase0: 2 sampled frames
+
+2025-11-13 19:03:25,103 - INFO - MoS2_10H2O_500MPa | phase0: 2 sampled frames
+
+2025-11-13 19:03:27,467 - INFO - MoS2_100H2O_5GPa | phase0: 2 sampled frames
+
+2025-11-13 19:03:29,353 - INFO - MoS2_50H2O_5GPa | phase0: 2 sampled frames
+
+2025-11-13 19:04:25,688 - INFO - MoS2_100H2O_500MPa | phase0: 2 sampled frames
+
+2025-11-13 23:27:30,628 - INFO - MoS2_50H2O_500MPa | phase1: 10 sampled frames
+
+2025-11-13 23:30:19,948 - INFO - MoS2_50H2O_1GPa | phase1: 10 sampled frames
+
+2025-11-13 23:33:52,401 - INFO - MoS2_10H2O_1GPa | phase1: 10 sampled frames
+
+2025-11-13 23:40:17,412 - INFO - MoS2_10H2O_5GPa | phase1: 10 sampled frames
+
+2025-11-13 23:42:00,762 - INFO - MoS2_50H2O_5GPa | phase1: 10 sampled frames
+
+2025-11-13 23:47:10,125 - INFO - MoS2_100H2O_1GPa | phase1: 10 sampled frames
+
+2025-11-13 23:53:10,577 - INFO - MoS2_50H2O_1GPa | phase2: 10 sampled frames
+
+2025-11-13 23:55:22,869 - INFO - MoS2_10H2O_500MPa | phase1: 10 sampled frames
+
+2025-11-13 23:56:35,713 - INFO - 1 exploration jobs are terminated, checking their status...
+2025-11-13 23:56:35,735 - INFO - Exploration job Explore_MoS2_50H2O_1GPa failed, see /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_1GPa for log and err files.
+2025-11-13 23:59:41,951 - INFO - MoS2_10H2O_1GPa | phase2: 10 sampled frames
+
+2025-11-14 00:01:41,254 - INFO - 1 exploration jobs are terminated, checking their status...
+2025-11-14 00:01:41,271 - INFO - Exploration job Explore_MoS2_10H2O_1GPa failed, see /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_1GPa for log and err files.
+2025-11-14 00:02:34,610 - INFO - MoS2_50H2O_500MPa | phase2: 10 sampled frames
+
+2025-11-14 00:02:42,579 - INFO - MoS2_100H2O_5GPa | phase1: 10 sampled frames
+
+2025-11-14 00:05:14,984 - INFO - MoS2_100H2O_5GPa | phase2: 10 sampled frames
+
+2025-11-14 00:06:46,036 - INFO - 2 exploration jobs are terminated, checking their status...
+2025-11-14 00:06:46,058 - INFO - Exploration job Explore_MoS2_100H2O_5GPa failed, see /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_5GPa for log and err files.
+2025-11-14 00:06:46,072 - INFO - Exploration job Explore_MoS2_50H2O_500MPa failed, see /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_500MPa for log and err files.
+2025-11-14 00:21:48,265 - INFO - MoS2_100H2O_500MPa | phase1: 10 sampled frames
+
+2025-11-14 00:31:07,626 - INFO - MoS2_100H2O_1GPa | phase2: 10 sampled frames
+
+2025-11-14 00:31:56,474 - INFO - 1 exploration jobs are terminated, checking their status...
+2025-11-14 00:31:57,182 - INFO - Exploration job Explore_MoS2_100H2O_1GPa failed, see /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_1GPa for log and err files.
+2025-11-14 01:05:04,037 - INFO - MoS2_10H2O_5GPa | phase2: 10 sampled frames
+
+2025-11-14 01:07:08,367 - INFO - 1 exploration jobs are terminated, checking their status...
+2025-11-14 01:07:08,384 - INFO - Exploration job Explore_MoS2_10H2O_5GPa failed, see /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_5GPa for log and err files.
+2025-11-14 01:24:46,867 - INFO - MoS2_10H2O_500MPa | phase2: 10 sampled frames
+
+2025-11-14 01:27:13,571 - INFO - 1 exploration jobs are terminated, checking their status...
+2025-11-14 01:27:13,588 - INFO - Exploration job Explore_MoS2_10H2O_500MPa failed, see /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_500MPa for log and err files.
+2025-11-14 01:51:32,224 - INFO - Preparing labelling jobs for 9 systems:
+2025-11-14 01:51:32,225 - INFO - MoS2_10H2O_5GPa  MoS2_10H2O_500MPa  MoS2_50H2O_5GPa  MoS2_100H2O_500MPa  MoS2_100H2O_5GPa  MoS2_100H2O_1GPa  MoS2_50H2O_1GPa  MoS2_10H2O_1GPa  MoS2_50H2O_500MPa
+2025-11-14 01:51:32,225 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_10H2O_5GPa
+2025-11-14 01:51:32,237 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_5GPa/SAMPLED
+2025-11-14 01:51:32,244 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_10H2O_500MPa
+2025-11-14 01:51:32,246 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_500MPa/SAMPLED
+2025-11-14 01:51:32,248 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_50H2O_5GPa
+2025-11-14 01:51:32,250 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_5GPa/SAMPLED
+2025-11-14 01:51:32,252 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_100H2O_500MPa
+2025-11-14 01:51:32,255 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_500MPa/SAMPLED
+2025-11-14 01:51:32,258 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_100H2O_5GPa
+2025-11-14 01:51:32,260 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_5GPa/SAMPLED
+2025-11-14 01:51:32,262 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_100H2O_1GPa
+2025-11-14 01:51:32,273 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_1GPa/SAMPLED
+2025-11-14 01:51:32,276 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_50H2O_1GPa
+2025-11-14 01:51:32,278 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_1GPa/SAMPLED
+2025-11-14 01:51:32,280 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_10H2O_1GPa
+2025-11-14 01:51:32,283 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_1GPa/SAMPLED
+2025-11-14 01:51:32,285 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_50H2O_500MPa
+2025-11-14 01:51:32,288 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_500MPa/SAMPLED
+2025-11-14 01:51:32,289 - INFO - Preparing to submit labelling jobs to queue system
+2025-11-14 01:51:32,290 - INFO - 1000 maximum concurrent jobs
+2025-11-14 01:51:32,290 - INFO - Saving JobManager status inside /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/scs.JobManager.yaml
+2025-11-14 01:51:32,290 - INFO - 300 seconds between job submissions and 86400 seconds for out-of-time
+2025-11-14 01:51:32,290 - INFO - Querying job status with command: sacct --format=State --noheader -j 
+2025-11-14 01:51:32,290 - INFO - Submitting 36 labelling jobs...
+2025-11-14 02:28:09,295 - INFO - 9 labelling jobs are terminated, checking their status...
+2025-11-14 02:28:10,071 - INFO - Label_MoS2_10H2O_5GPa_0 terminated: 4 remaining calculations for this system
+2025-11-14 02:28:10,071 - INFO - Resubmitting Label_MoS2_10H2O_5GPa_0
+2025-11-14 02:28:10,085 - INFO - 0 restarts remaining for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_5GPa/SAMPLED
+2025-11-14 02:28:10,145 - INFO - Label_MoS2_10H2O_5GPa_1 terminated: 4 remaining calculations for this system
+2025-11-14 02:28:10,145 - INFO - No restarts available, waiting for other jobs in /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_5GPa/SAMPLED to finish...
+2025-11-14 02:28:10,219 - INFO - Label_MoS2_10H2O_5GPa_3 terminated: 4 remaining calculations for this system
+2025-11-14 02:28:10,219 - INFO - No restarts available, waiting for other jobs in /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_5GPa/SAMPLED to finish...
+2025-11-14 02:28:10,714 - INFO - Label_MoS2_10H2O_500MPa_0 terminated: 1 remaining calculations for this system
+2025-11-14 02:28:10,714 - INFO - Resubmitting Label_MoS2_10H2O_500MPa_0
+2025-11-14 02:28:10,725 - INFO - 0 restarts remaining for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_500MPa/SAMPLED
+2025-11-14 02:28:10,770 - INFO - Label_MoS2_10H2O_500MPa_1 terminated: 1 remaining calculations for this system
+2025-11-14 02:28:10,770 - INFO - No restarts available, waiting for other jobs in /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_500MPa/SAMPLED to finish...
+2025-11-14 02:28:10,825 - INFO - Label_MoS2_10H2O_500MPa_2 terminated: 1 remaining calculations for this system
+2025-11-14 02:28:10,825 - INFO - No restarts available, waiting for other jobs in /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_500MPa/SAMPLED to finish...
+2025-11-14 02:28:11,220 - INFO - Label_MoS2_50H2O_5GPa_0 terminated: 6 remaining calculations for this system
+2025-11-14 02:28:11,220 - INFO - Resubmitting Label_MoS2_50H2O_5GPa_0
+2025-11-14 02:28:11,232 - INFO - 0 restarts remaining for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_5GPa/SAMPLED
+2025-11-14 02:28:11,282 - INFO - Label_MoS2_50H2O_5GPa_1 terminated: 6 remaining calculations for this system
+2025-11-14 02:28:11,282 - INFO - No restarts available, waiting for other jobs in /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_5GPa/SAMPLED to finish...
+2025-11-14 02:28:11,336 - INFO - Label_MoS2_50H2O_5GPa_3 terminated: 6 remaining calculations for this system
+2025-11-14 02:28:11,336 - INFO - No restarts available, waiting for other jobs in /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_5GPa/SAMPLED to finish...
+2025-11-14 02:28:20,374 - INFO - 1 labelling jobs are terminated, checking their status...
+2025-11-14 02:28:20,424 - INFO - Label_MoS2_10H2O_5GPa_2 terminated: 4 remaining calculations for this system
+2025-11-14 02:28:20,424 - INFO - No restarts available, waiting for other jobs in /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_5GPa/SAMPLED to finish...
+2025-11-14 09:25:09,163 - INFO - Preparing labelling jobs for 9 systems:
+2025-11-14 09:25:09,164 - INFO - MoS2_10H2O_5GPa  MoS2_10H2O_500MPa  MoS2_50H2O_5GPa  MoS2_100H2O_500MPa  MoS2_100H2O_5GPa  MoS2_100H2O_1GPa  MoS2_50H2O_1GPa  MoS2_10H2O_1GPa  MoS2_50H2O_500MPa
+2025-11-14 09:25:09,165 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_10H2O_5GPa
+2025-11-14 09:25:09,168 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_5GPa/SAMPLED
+2025-11-14 09:25:09,172 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_10H2O_500MPa
+2025-11-14 09:25:09,174 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_500MPa/SAMPLED
+2025-11-14 09:25:09,177 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_50H2O_5GPa
+2025-11-14 09:25:09,180 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_5GPa/SAMPLED
+2025-11-14 09:25:09,182 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_100H2O_500MPa
+2025-11-14 09:25:09,184 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_500MPa/SAMPLED
+2025-11-14 09:25:09,187 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_100H2O_5GPa
+2025-11-14 09:25:09,189 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_5GPa/SAMPLED
+2025-11-14 09:25:09,191 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_100H2O_1GPa
+2025-11-14 09:25:09,194 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_1GPa/SAMPLED
+2025-11-14 09:25:09,196 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_50H2O_1GPa
+2025-11-14 09:25:09,199 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_1GPa/SAMPLED
+2025-11-14 09:25:09,202 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_10H2O_1GPa
+2025-11-14 09:25:09,204 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_1GPa/SAMPLED
+2025-11-14 09:25:09,206 - INFO - Reading SCF parameters from /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems/MoS2_50H2O_500MPa
+2025-11-14 09:25:09,209 - INFO - Writing labelling jobscript in: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_500MPa/SAMPLED
+2025-11-14 09:25:09,210 - INFO - Preparing to submit labelling jobs to queue system
+2025-11-14 09:25:09,228 - INFO - 1000 maximum concurrent jobs
+2025-11-14 09:25:09,228 - INFO - Saving JobManager status inside /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/scs.JobManager.yaml
+2025-11-14 09:25:09,228 - INFO - 300 seconds between job submissions and 86400 seconds for out-of-time
+2025-11-14 09:25:09,228 - INFO - Querying job status with command: sacct --format=State --noheader -j 
+2025-11-14 09:25:09,228 - INFO - Submitting 36 labelling jobs...
+2025-11-14 09:25:18,129 - INFO - 29 labelling jobs are terminated, checking their status...
+2025-11-14 09:25:18,167 - INFO - Label_MoS2_10H2O_5GPa_0 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:18,167 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_5GPa/SAMPLED completed:
+2025-11-14 09:25:18,420 - INFO - 20 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:18,443 - INFO - Label_MoS2_10H2O_500MPa_0 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:18,443 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_500MPa/SAMPLED completed:
+2025-11-14 09:25:18,588 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:18,601 - INFO - Label_MoS2_10H2O_500MPa_3 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:18,601 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_500MPa/SAMPLED completed:
+2025-11-14 09:25:18,742 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:18,772 - INFO - Label_MoS2_50H2O_5GPa_0 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:18,773 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_5GPa/SAMPLED completed:
+2025-11-14 09:25:18,958 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:18,976 - INFO - Label_MoS2_50H2O_5GPa_2 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:18,976 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_5GPa/SAMPLED completed:
+2025-11-14 09:25:19,145 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:19,180 - INFO - Label_MoS2_100H2O_500MPa_0 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:19,181 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_500MPa/SAMPLED completed:
+2025-11-14 09:25:19,480 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:19,496 - INFO - Label_MoS2_100H2O_500MPa_1 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:19,496 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_500MPa/SAMPLED completed:
+2025-11-14 09:25:19,698 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:19,714 - INFO - Label_MoS2_100H2O_500MPa_2 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:19,714 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_500MPa/SAMPLED completed:
+2025-11-14 09:25:19,914 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:19,930 - INFO - Label_MoS2_100H2O_500MPa_3 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:19,930 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_500MPa/SAMPLED completed:
+2025-11-14 09:25:20,142 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:20,170 - INFO - Label_MoS2_100H2O_5GPa_0 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:20,171 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_5GPa/SAMPLED completed:
+2025-11-14 09:25:20,401 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:20,417 - INFO - Label_MoS2_100H2O_5GPa_1 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:20,417 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_5GPa/SAMPLED completed:
+2025-11-14 09:25:20,618 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:20,633 - INFO - Label_MoS2_100H2O_5GPa_2 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:20,634 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_5GPa/SAMPLED completed:
+2025-11-14 09:25:20,840 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:20,856 - INFO - Label_MoS2_100H2O_5GPa_3 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:20,856 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_5GPa/SAMPLED completed:
+2025-11-14 09:25:21,054 - INFO - 12 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:21,103 - INFO - Label_MoS2_100H2O_1GPa_0 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:21,104 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:21,508 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:21,536 - INFO - Label_MoS2_100H2O_1GPa_1 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:21,536 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:21,875 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:21,910 - INFO - Label_MoS2_100H2O_1GPa_2 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:21,910 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:22,249 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:22,277 - INFO - Label_MoS2_100H2O_1GPa_3 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:22,277 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_100H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:22,622 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:22,675 - INFO - Label_MoS2_50H2O_1GPa_0 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:22,675 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:22,955 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:22,980 - INFO - Label_MoS2_50H2O_1GPa_1 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:22,980 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:23,265 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:23,292 - INFO - Label_MoS2_50H2O_1GPa_2 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:23,292 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:23,573 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:23,597 - INFO - Label_MoS2_50H2O_1GPa_3 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:23,597 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:23,877 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:23,920 - INFO - Label_MoS2_10H2O_1GPa_0 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:23,920 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:24,155 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:24,177 - INFO - Label_MoS2_10H2O_1GPa_1 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:24,177 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:24,405 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:24,425 - INFO - Label_MoS2_10H2O_1GPa_2 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:24,425 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:24,657 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:24,678 - INFO - Label_MoS2_10H2O_1GPa_3 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:24,678 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_10H2O_1GPa/SAMPLED completed:
+2025-11-14 09:25:24,910 - INFO - 21 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:24,941 - INFO - Label_MoS2_50H2O_500MPa_0 terminated: 3 remaining calculations for this system
+2025-11-14 09:25:24,941 - INFO - Resubmitting Label_MoS2_50H2O_500MPa_0
+2025-11-14 09:25:24,952 - INFO - 0 restarts remaining for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_500MPa/SAMPLED
+2025-11-14 09:25:24,962 - INFO - Label_MoS2_50H2O_500MPa_1 terminated: 3 remaining calculations for this system
+2025-11-14 09:25:24,962 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_500MPa/SAMPLED completed:
+2025-11-14 09:25:25,088 - INFO - 7 converged, 3 missing, 0 failed, 0 crashed
+2025-11-14 09:25:25,098 - INFO - Label_MoS2_50H2O_500MPa_2 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:25,098 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_500MPa/SAMPLED completed:
+2025-11-14 09:25:25,206 - INFO - 7 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:25:25,214 - INFO - Label_MoS2_50H2O_500MPa_3 terminated: 0 remaining calculations for this system
+2025-11-14 09:25:25,214 - INFO - Labelling for /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Iterations/0/Exploration/MoS2_50H2O_500MPa/SAMPLED completed:
+2025-11-14 09:25:25,344 - INFO - 7 converged, 0 missing, 0 failed, 0 crashed
+2025-11-14 09:27:47,988 - INFO - Creating extxyz dataset from new labelled data:
+MoS2_10H2O_5GPa: [20]
+MoS2_10H2O_500MPa: [12]
+MoS2_50H2O_5GPa: [12]
+MoS2_100H2O_500MPa: [12]
+MoS2_100H2O_5GPa: [12]
+MoS2_100H2O_1GPa: [21]
+MoS2_50H2O_1GPa: [21]
+MoS2_10H2O_1GPa: [21]
+MoS2_50H2O_500MPa: [7]
+
+2025-11-14 09:27:48,836 - INFO - Total dataset with 434 frames collected from both initial and generated data up to iteration 0
+
+2025-11-14 09:27:48,836 - INFO - 
+CONVERTING phase is successfully terminated, moving to END phase...
+

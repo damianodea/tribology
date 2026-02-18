@@ -1,0 +1,59 @@
+Dataset:
+  Atom_types : ['H', 'O', 'S', 'Mo']                                                                           # Atomic species for dataset
+  Initial: /leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Datasets/Initial/dataset.xyz
+
+Training:
+  Model_type : 'MACE'                                                                                    # Model type: 'MACE' or 'DP'
+  N_models : 4                                                                                           # Number of models in ensemble
+  N_epochs : 100                                                                                         # Number of training epochs
+  Reference : '/leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Jobs_and_Inputs/training/input_finetuning.yaml'             # Path to reference training input file
+  Wait_time : 600                                                                                       # Time between exploration status checks   
+  Max_wait_time : 86400                                                                                  # Maximum time allowed for exploration  
+  Job : 
+    Jobscript: "/leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Jobs_and_Inputs/training/job_training.sh"                          # Path to training jobscript
+    Job_cmd: ""                                                                                         # Additional commands added to the jobscript
+    Local_mode: False
+    Max_jobs: 1000
+    Wait_seconds: 300
+    Max_seconds: 86400    
+    Submit_cmd: "sbatch"    
+    Query_cmd: "sacct --format=State --noheader -j "
+    # State_file: f"{scs_root_dir}/scs.JobManager.yaml"
+    # Query_cmd : "squeue -u $USER -o %T -j "                                                               # Command to query job status
+    # Query_keys : ['PENDING', 'RUNNING']                                                                  # Output keywords for job status  
+
+Exploration:
+  Systems: "/leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems"
+  Wait_time : 600                                                                                       # Time between exploration status checks   
+  Max_wait_time : 86400                                                                                  # Maximum time allowed for exploration  
+  Job :
+    Engine : "LAMMPS"                                                                                       # Engine for exploration md: 'ASE' or 'LAMMPS'
+    Job_cmd : "mpirun -np 1 /leonardo_scratch/fast/EUHPC_A04_113/Alberto/MLIP/MACE/lammps-mace-mliap/build-cuda-aware-243-rigid/lmp -k on g 1 -sf kk -pk kokkos newton on neigh half -in "           # Additional commands added to the jobscript (example for ASE)
+    # Engine : "ASE"                                                                                       # Engine for exploration md: 'ASE' or 'LAMMPS'
+    Packmol : "/leonardo/home/userexternal/apacini0/Softwares/packmol/packmol"                           # Path to packmol executable
+    Jobscript : "/leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Jobs_and_Inputs/exploration/job_exploration.sh"                          # Path to exploration jobscript
+    Local_mode: False
+    Max_jobs: 1000
+    Wait_seconds: 300
+    Max_seconds: 86400    
+    Submit_cmd: "sbatch"    
+    Query_cmd: "sacct --format=State --noheader -j "
+    # State_file: f"{scs_root_dir}/scs.JobManager.yaml"
+    # Query_cmd : "squeue -u $USER -o %T -j"                                                               # Command to query job status
+    # Query_keys : ['PENDING', 'RUNNING']                                                                  # Output keywords for job status      
+
+Labelling:
+  Systems : '/leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Systems'                                                         # Path to explored systems
+  Wait_time : 600                                                                                       # Time between labelling status checks
+  Max_wait_time : 86400                                                                                  # Maximum time allowed for labelling
+  Job : 
+    Local_mode: False
+    Max_jobs: 1000
+    Wait_seconds: 300
+    Max_seconds: 86400    
+    Submit_cmd: "sbatch"    
+    Query_cmd: "sacct --format=State --noheader -j "
+    # State_file: f"{scs_root_dir}/scs.JobManager.yaml"
+    # Query_cmd: "sacct --format=State --noheader -j "
+    # Query_cmd : "squeue -u $USER -o %T -j"                                                               # Command to query job status
+    # Query_keys : ['PENDING', 'RUNNING']                                                                  # Output keywords for job status
