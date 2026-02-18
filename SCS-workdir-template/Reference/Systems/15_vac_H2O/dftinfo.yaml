@@ -1,0 +1,5 @@
+Restarts : 1
+Groups : 4
+Job_cmd : "mpirun -np 8 --map-by socket:PE=8 --rank-by core pw.x -nk 1"
+Jobscript : "/leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Jobs_and_Inputs/labelling/job_qe.sh"
+Labeler: "QuantumEspresso"

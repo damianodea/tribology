@@ -1,0 +1,42 @@
+Phase0: #Pressurize calcite surface with O2 molecules
+  Geometry:
+    Species: {Mo : 95.95, O : 15.999}
+    Bulk:
+      Structure_1:
+        Path: "/leonardo_scratch/fast/IscrB_CNT-HARV/Alberto/Project_MoS2-GO/SCS/Reference/Structures/bulks/MoO3_2x2x3.extxyz"
+  Run:
+    Type: 'Relax'
+
+    Sampling: 1
+    Sampling_mode: "Max_devi"     #Sampling mode: 'Random' or 'Max_devi'    
+    Out_freq: 5
+    Relative: 0.1
+    Min_devi: 0.01        
+
+Phase1: #Apply NPT
+  Run:
+    Type: 'NVT'
+    Timestep: 1.0 #fs
+    Steps: 500000 #500ps
+    Temperature: {Tstart : 1, Tstop : 1500}
+
+    Sampling: 25
+    Sampling_mode: "Max_devi"     #Sampling mode: 'Random' or 'Max_devi'    
+    Out_freq: 50
+    Relative: 0.1
+    Min_devi: 0.01      
+    Max_cell_size: 60
+
+Phase2: #Apply NPT
+  Run:
+    Type: 'NVT'
+    Timestep: 1.0 #fs
+    Steps: 500000 #500ps
+    Temperature: {Tstart : 1500, Tstop : 1}
+
+    Sampling: 25
+    Sampling_mode: "Max_devi"     #Sampling mode: 'Random' or 'Max_devi'    
+    Out_freq: 50
+    Relative: 0.1
+    Min_devi: 0.01      
+    Max_cell_size: 60    

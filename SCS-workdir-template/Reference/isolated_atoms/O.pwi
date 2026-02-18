@@ -1,0 +1,47 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    pseudo_dir = '/leonardo/home/userexternal/apacini0/PSEUDO'
+    tprnfor = .true.
+    outdir = './OUT/'
+    disk_io = 'none'
+    max_seconds = 86000
+ /
+ &system
+     ibrav = 0
+     nat = 1
+     ntyp = 4
+     ecutwfc = 50.0
+     ecutrho = 400
+     occupations = 'smearing'
+     smearing = 'gaussian'
+     degauss = 0.02
+     nspin = 2
+     nosym = .true.
+     vdw_corr = 'DFT-D3'
+     starting_magnetization(1) = 0.2
+     starting_magnetization(2) = 0.2
+     starting_magnetization(3) = 0.2
+     starting_magnetization(4) = 0.2
+ /
+ &electrons
+    diagonalization = 'david'
+    electron_maxstep = 200
+    mixing_mode = 'local-TF'
+    mixing_beta = 0.2
+    conv_thr = 1.0d-6
+ /
+
+ATOMIC_SPECIES
+ Mo  95.95   Mo.pbe-spn-rrkjus_psl.0.2.UPF
+ S   32.065  S.pbe-n-rrkjus_psl.0.1.UPF
+ O  15.999   O.pbe-n-kjpaw_psl.1.0.0.UPF
+ H   1.008   H.pbe-kjpaw_psl.1.0.0.UPF
+
+CELL_PARAMETERS angstrom
+20.00000   0.000000   0.000000
+ 0.00000  20.300000   0.000000
+ 0.00000   0.000000  20.500000
+
+ATOMIC_POSITIONS angstrom
+O    0.0  0.0  0.0

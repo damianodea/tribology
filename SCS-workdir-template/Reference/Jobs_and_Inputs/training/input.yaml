@@ -1,0 +1,63 @@
+# Dataset settings
+train_file: /path/to/Train-data.xyz
+valid_file: /path/to/Valid-data.xyz
+energy_key: REF_energy
+forces_key: REF_forces
+num_workers: 8
+# E0s: {6: -243.08711956171527, 8: -561.8548934062154, 20: -1814.7298580706974} # E0 for H, C, O, Ca
+E0s: {1: -13.688695633328994, 6: -243.08711956171527, 8: -561.8548934062154, 20: -1814.7298580706974} # E0 for H, C, O, Ca
+
+# model settings
+name: MACE
+model: MACE
+num_interactions: 2
+num_channels: 64
+num_radial_basis: 10
+correlation: 3
+max_L: 1
+r_max: 6.0
+distance_transform: Agnesi
+default_dtype: float32
+
+# training settings
+seed: 12345
+max_num_epochs: 100
+lr: 0.005
+scheduler_patience: 5
+swa: true
+start_swa: 30
+ema: true
+ema_decay: 0.9999
+amsgrad: true
+batch_size: 2
+valid_batch_size: 4
+restart_latest: true
+
+# loss settings. the defaults (f=100,e=1) and f=100,e=1000 after swa work quite well
+#forces_weight: 10.0
+#energy_weight: 1.0
+
+# optimization settings
+device: cuda
+enable_cueq: true
+distributed: false # multi-GPU
+
+# end-of-training settings
+error_table: PerAtomRMSE
+save_cpu: false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
